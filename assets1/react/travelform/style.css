@@ -1,0 +1,24 @@
+.travel_form_panel {
+    margin-top: 55px;
+}
+
+.travel_button {
+    background-color: #fd3e30;
+    color: white;
+}
+
+.prix_error_label {
+    display: none;
+    font-weight: 500;
+    margin-top: -7px;
+    color: red;
+    float: right;
+}
+
+.show {
+    display: block !important;
+}
+
+.text-field-custom {
+    border: 2px solid rgb(0, 0, 0) !important;
+  }

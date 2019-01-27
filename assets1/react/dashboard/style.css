@@ -1,0 +1,58 @@
+.travel_list_form {
+    display: inline-flex;
+    width: 100%;
+}
+
+.travel_list_input_group {
+    padding-left: 100px;
+}
+
+.travel_list_input {
+    width: 300px;
+}
+
+.article_section {
+    width: 50%;
+}
+
+.article_no_rooms {
+    width: 100%;
+    text-align: center;
+    color: #fd3e30;
+}
+
+.article {
+    border: 2px solid #bce8f1;
+    width: 60%;
+    margin-top: 10px;
+}
+
+.article_city {
+    width: 100%;
+    text-align: center;
+}
+
+.article_date {
+    width: 100%;
+}
+
+.article_start_date {
+    width: 50%;
+    text-align: center;
+    font-weight: 300;
+}
+
+.article_end_date {
+    width: 50%;
+    text-align: center;
+    font-weight: 300;
+}
+
+.article_div {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.article_button {
+    text-align: center;
+}
