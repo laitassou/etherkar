@@ -1,0 +1,166 @@
+{% load staticfiles %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ETHER KAR</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="{% static 'main-theme.css' %}">
+    
+
+        <link rel="stylesheet" href="{% static 'fonts/FontAwesome/css/fontawesome-all.min.css' %}">
+
+<body>
+    <!--   Heder starts here-->
+    <header class="page_header">
+        <div class="dashbord_header">
+            <div class="container">
+                <div class="row">
+                    <a href="#" class="col-lg-3 logo">
+                        <div class="logo__img"><img src="/static/react/ui/images/logo.png" alt="logo"></div>
+                        <div class="logo__text"> <span>Ether</span> <span>KAR</span></div>
+                    </a>
+                    <nav class="col-lg-9 ml-auto main_nav">
+                        <ul>
+                            <li><a href="#">Terms</a></li>
+                            <li><a href="#">FAQs</a></li>
+                            <li><a href="#" class="active">Dashboard</a></li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">Cars</a></li>
+                            <li><a href="#">Add Travel</a></li>
+                            <li><a href="#">Search Travel</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--heder ends here-->
+
+    <!--My reservations section starts here-->
+    <section class="my_reservations">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="dashbord_title">My reservations: <span>2</span></h3>
+                </div>
+            </div>
+            <div class="my_reservations_table">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table_row">
+                            <div class="depatures">FL, США</div>
+                            <div class="user">golovcovadim</div>
+                            <div class="price">1.500</div>
+                            <div class="date">4/29/2018</div>
+                            <div class="time">15:45</div>
+                            <div class="phone">+373 68796948</div>
+                            <div class="places">Total places: <span>5</span></div>
+                            <div class="reserved">Reserved: <span>1</span></div>
+                            <div class="status">Status</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table_row">
+                            <div class="depatures">FL, США</div>
+                            <div class="user">lenogo1996</div>
+                            <div class="price">450</div>
+                            <div class="date">4/30/2018</div>
+                            <div class="time">16:00</div>
+                            <div class="phone">+373 58996655</div>
+                            <div class="places">Total places: <span>5</span></div>
+                            <div class="reserved">Reserved: <span>2</span></div>
+                            <div class="status">Status</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--My reservations section ends here-->
+    <!--Published travels sectio starts here-->
+    <section class="published_travels">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="dashbord_title">published travels: <span>4</span></h3>
+                </div>
+            </div>
+            <div class="published_travels_table">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table_row">
+                            <div class="depatures">FL, США</div>
+                            <div class="price">1.500</div>
+                            <div class="date">4/29/2018</div>
+                            <div class="time">15:45</div>
+                            <div class="places">Total places: <span>5</span></div>
+                            <div class="reserved">Reserved: <span>1</span></div>
+                            <div class="status">Status</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table_row">
+                            <div class="depatures">FL, США</div>
+                            <div class="price">1.500</div>
+                            <div class="date">4/29/2018</div>
+                            <div class="time">15:45</div>
+                            <div class="places">Total places: <span>5</span></div>
+                            <div class="reserved">Reserved: <span>1</span></div>
+                            <div class="status">Status</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="table_row">
+                            <div class="depatures">FL, США</div>
+                            <div class="price">1.500</div>
+                            <div class="date">4/29/2018</div>
+                            <div class="time">15:45</div>
+                            <div class="places">Total places: <span>5</span></div>
+                            <div class="reserved">Reserved: <span>1</span></div>
+                            <div class="status">Status</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Pudlished travels section ends here-->
+    <!--Footer starts here-->
+    <footer class="page_footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer_content">
+                    <div class="col-sm-2 cpoyright">© 2018 Ether Kar</div>
+                    <div class="col-sm-7 footer_nav">
+                        <nav>
+                            <ul>
+                                <li><a href="#">Terms</a></li>
+                                <li><a href="#">FAQs</a></li>
+                                <li><a href="#">Search Travel</a></li>
+                                <li><a href="#">Sign Up</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Footer ends here-->
+</body>
+
+</html>

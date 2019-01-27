@@ -1,0 +1,89 @@
+{% load staticfiles %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRYPTO CAR</title>
+
+
+       <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/FontAwesome/css/fontawesome-all.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'main-theme.css' %}"> 
+
+    
+          <!-- Latest compiled and minified CSS -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+          integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+            <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+            
+      <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjrASpZBOH0FwmaUwo2-ZMsKu5SsOaE6U&libraries=places"></script>   
+
+
+
+</head>
+<body    style=" background-color: #cbdcf1">
+
+        <header class="page_header" style=" background-color: #f0dfdf">
+                <div class="dashbord_header">
+                    <div class="container">
+                        <div class="row">
+                            <a href="/app" class="col-lg-3 logo">
+                                <div class="logo__img"><img src="/static/react/ui/images/logo.png" alt="logo"></div>
+                                <div class="logo__text"> <span>Ether</span> <span>KAR</span></div>
+                            </a>
+                            <nav id="menu"  class="col-lg-9 ml-auto main_nav">
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+  <section class="my_reservations">
+      <div id="app"></div>
+      <script src="{% static 'bundles/main.js' %}"></script>
+   
+</section>
+
+
+
+
+<footer class="page_footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer_content">
+                    <div class="col-sm-2 cpoyright">© 2018 Ether Kar</div>
+                    <div class="col-sm-9 footer_nav">
+                        <nav>
+                            <ul>   
+                                 <li><a href="/app/contact">Contact us</a></li>
+                                <li><a href="/app/about">Terms</a></li>
+                                <li><a href="/app/faqs">FAQs</a></li>
+                                <li><a href="/app/search">Search Travel</a></li>
+                                <li><a href="/app/signup">Sign Up</a></li>
+                                <li><a href="#">Login</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+
+</html>

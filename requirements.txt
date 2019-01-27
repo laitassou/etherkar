@@ -1,0 +1,10 @@
+dj-database-url
+Django
+django-rest-framework
+djangorestframework
+gunicorn
+psycopg2
+pytz
+whitenoise
+djangosecure
+wsgi_sslify 

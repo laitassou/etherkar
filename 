@@ -1,0 +1,34 @@
+
+ten
+  let web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/vRtx5LtC6D1enY0g6x0k"));
+
+  /////let web3 = store.getState().web3.web3Instance
+   web3.eth.defaultAccount = web3.eth.accounts[0];
+
+  // Double-check web3's status.
+  if (typeof web3 !== 'undefined') {
+
+   
+      // Using truffle-contract we create the authentication object.
+      const authentication = contract(AuthenticationContract)
+
+      /////const authentication =  web3.eth.contract(AuthenticationContract,'0x3661a5a703696eb2702f9feba51da416e97a39a2')
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#	modified:   assets/build/contracts/Migrations.json
+#	modified:   assets/bundles/main.js
+#	modified:   assets/react/travelform/TravelFormActions.js
+#
+# Untracked files:
+#	assets/bundles/static/
+#	assets/react/resources/logo-kar-1.svg
+#	assets/react/resources/logo-kar.svg
+#	assets/react/travels/simpleTabs.jsx
+#	assets/react/ui/images/1 kar-04.svg
+#	assets/react/ui/images/kar-green.png
+#	assets/react/ui/images/kar-green.svg
+#	commands.txt
+#
