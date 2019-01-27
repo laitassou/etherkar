@@ -1,0 +1,418 @@
+{
+  "contractName": "CarTypes",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a723058208980a96b0692b8d8e601575341ba2da68ef144a0b2bf2b8ae9025bfb05f0aa5b0029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a723058208980a96b0692b8d8e601575341ba2da68ef144a0b2bf2b8ae9025bfb05f0aa5b0029",
+  "sourceMap": "28:605:2:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "28:605:2:-;;;;;",
+  "source": "pragma solidity ^0.4.18;\r\n\r\ncontract CarTypes {\r\n   \r\n   /*\r\n    enum Color { WHITE, BLACK, BLUE, RED}\r\n    enum Transmission {MANUAL, AUTOMATIC}\r\n    enum CarStatus {AVAILABLE, UNAVAILABLE}\r\n    enum Brand {PEUGEOT, RENAULT, CITROEN, FORD, BMW, AUDI, MERCEDES,FIAT, TESLA}\r\n  */\r\n    struct Car {\r\n        bytes16 brand;\r\n        bytes16 model;\r\n        uint8 color ;\r\n        bool exists;\r\n\r\n    }\r\n\r\n    uint constant CAR_ACCESS_UNLOCK = 1;\r\n    uint constant CAR_ACCESS_LOCK = 2;\r\n    uint constant CAR_ACCESS_REMOTE_START = 4;\r\n    uint constant CAR_ACCESS_ALL = CAR_ACCESS_UNLOCK | CAR_ACCESS_LOCK | CAR_ACCESS_REMOTE_START;\r\n}",
+  "sourcePath": "C:\\codes\\ethereum\\sergiy\\DjangoReactWebpack\\assets\\contracts\\cars\\CarTypes.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/codes/ethereum/sergiy/DjangoReactWebpack/assets/contracts/cars/CarTypes.sol",
+      "exportedSymbols": {
+        "CarTypes": [
+          233
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 207,
+        "name": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            233
+          ],
+          "name": "CarTypes",
+          "scope": 234
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "CarTypes.Car",
+              "name": "Car",
+              "scope": 233,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "brand",
+                  "scope": 216,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes16",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes16",
+                      "type": "bytes16"
+                    },
+                    "id": 208,
+                    "name": "ElementaryTypeName",
+                    "src": "307:7:2"
+                  }
+                ],
+                "id": 209,
+                "name": "VariableDeclaration",
+                "src": "307:13:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "model",
+                  "scope": 216,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes16",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes16",
+                      "type": "bytes16"
+                    },
+                    "id": 210,
+                    "name": "ElementaryTypeName",
+                    "src": "331:7:2"
+                  }
+                ],
+                "id": 211,
+                "name": "VariableDeclaration",
+                "src": "331:13:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "color",
+                  "scope": 216,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint8",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint8",
+                      "type": "uint8"
+                    },
+                    "id": 212,
+                    "name": "ElementaryTypeName",
+                    "src": "355:5:2"
+                  }
+                ],
+                "id": 213,
+                "name": "VariableDeclaration",
+                "src": "355:11:2"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "exists",
+                  "scope": 216,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bool",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 214,
+                    "name": "ElementaryTypeName",
+                    "src": "378:4:2"
+                  }
+                ],
+                "id": 215,
+                "name": "VariableDeclaration",
+                "src": "378:11:2"
+              }
+            ],
+            "id": 216,
+            "name": "StructDefinition",
+            "src": "285:114:2"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "CAR_ACCESS_UNLOCK",
+              "scope": 233,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 217,
+                "name": "ElementaryTypeName",
+                "src": "407:4:2"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "31",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 1",
+                  "value": "1"
+                },
+                "id": 218,
+                "name": "Literal",
+                "src": "441:1:2"
+              }
+            ],
+            "id": 219,
+            "name": "VariableDeclaration",
+            "src": "407:35:2"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "CAR_ACCESS_LOCK",
+              "scope": 233,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 220,
+                "name": "ElementaryTypeName",
+                "src": "449:4:2"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "32",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 2",
+                  "value": "2"
+                },
+                "id": 221,
+                "name": "Literal",
+                "src": "481:1:2"
+              }
+            ],
+            "id": 222,
+            "name": "VariableDeclaration",
+            "src": "449:33:2"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "CAR_ACCESS_REMOTE_START",
+              "scope": 233,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 223,
+                "name": "ElementaryTypeName",
+                "src": "489:4:2"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "34",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 4",
+                  "value": "4"
+                },
+                "id": 224,
+                "name": "Literal",
+                "src": "529:1:2"
+              }
+            ],
+            "id": 225,
+            "name": "VariableDeclaration",
+            "src": "489:41:2"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "CAR_ACCESS_ALL",
+              "scope": 233,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 226,
+                "name": "ElementaryTypeName",
+                "src": "537:4:2"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "commonType": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "operator": "|",
+                  "type": "uint256"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "operator": "|",
+                      "type": "uint256"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 219,
+                          "type": "uint256",
+                          "value": "CAR_ACCESS_UNLOCK"
+                        },
+                        "id": 227,
+                        "name": "Identifier",
+                        "src": "568:17:2"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 222,
+                          "type": "uint256",
+                          "value": "CAR_ACCESS_LOCK"
+                        },
+                        "id": 228,
+                        "name": "Identifier",
+                        "src": "588:15:2"
+                      }
+                    ],
+                    "id": 229,
+                    "name": "BinaryOperation",
+                    "src": "568:35:2"
+                  },
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 225,
+                      "type": "uint256",
+                      "value": "CAR_ACCESS_REMOTE_START"
+                    },
+                    "id": 230,
+                    "name": "Identifier",
+                    "src": "606:23:2"
+                  }
+                ],
+                "id": 231,
+                "name": "BinaryOperation",
+                "src": "568:61:2"
+              }
+            ],
+            "id": 232,
+            "name": "VariableDeclaration",
+            "src": "537:92:2"
+          }
+        ],
+        "id": 233,
+        "name": "ContractDefinition",
+        "src": "28:605:2"
+      }
+    ],
+    "id": 234,
+    "name": "SourceUnit",
+    "src": "0:633:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-05-17T20:00:26.929Z"
+}

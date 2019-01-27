@@ -1,0 +1,362 @@
+{
+  "contractName": "ErrorTypes",
+  "abi": [],
+  "bytecode": "0x60606040523415600e57600080fd5b603580601b6000396000f3006060604052600080fd00a165627a7a723058205219994f9234e2c3ef0c4c9475b8b28aa16347704958bcec9a2ca36ce74ef6c10029",
+  "deployedBytecode": "0x6060604052600080fd00a165627a7a723058205219994f9234e2c3ef0c4c9475b8b28aa16347704958bcec9a2ca36ce74ef6c10029",
+  "sourceMap": "28:524:3:-;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "28:524:3:-;;;;;",
+  "source": "pragma solidity ^0.4.18;\r\n\r\ncontract ErrorTypes {\r\n    //typedef vin_t bytes17; \r\n    //typedef license_t bytes16;\r\n    //typedef carid_t uint32;\r\n    // Related to solidity issure: https://github.com/ethereum/solidity/issues/1100\r\n\r\n    // Error codes\r\n    uint constant SUCCESS = 1;\r\n    uint constant ACCOUNT_ALREADY_EXIST = 1;\r\n    uint constant ACCOUNT_NOT_EXIST = 2;\r\n    uint constant ERROR = 0;\r\n\r\n\r\n    uint constant CAR_ALREADY_REGISTERED = 1000;\r\n    uint constant CAR_NOT_REGISTERED = 1001;\r\n    uint constant CAR_NOT_AVAILABLE = 1002;\r\n\r\n}",
+  "sourcePath": "C:\\codes\\ethereum\\sergiy\\DjangoReactWebpack\\assets\\contracts\\cars\\ErrorTypes.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/codes/ethereum/sergiy/DjangoReactWebpack/assets/contracts/cars/ErrorTypes.sol",
+      "exportedSymbols": {
+        "ErrorTypes": [
+          257
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 235,
+        "name": "PragmaDirective",
+        "src": "0:24:3"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            257
+          ],
+          "name": "ErrorTypes",
+          "scope": 258
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": true,
+              "name": "SUCCESS",
+              "scope": 257,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 236,
+                "name": "ElementaryTypeName",
+                "src": "258:4:3"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "31",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 1",
+                  "value": "1"
+                },
+                "id": 237,
+                "name": "Literal",
+                "src": "282:1:3"
+              }
+            ],
+            "id": 238,
+            "name": "VariableDeclaration",
+            "src": "258:25:3"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "ACCOUNT_ALREADY_EXIST",
+              "scope": 257,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 239,
+                "name": "ElementaryTypeName",
+                "src": "290:4:3"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "31",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 1",
+                  "value": "1"
+                },
+                "id": 240,
+                "name": "Literal",
+                "src": "328:1:3"
+              }
+            ],
+            "id": 241,
+            "name": "VariableDeclaration",
+            "src": "290:39:3"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "ACCOUNT_NOT_EXIST",
+              "scope": 257,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 242,
+                "name": "ElementaryTypeName",
+                "src": "336:4:3"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "32",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 2",
+                  "value": "2"
+                },
+                "id": 243,
+                "name": "Literal",
+                "src": "370:1:3"
+              }
+            ],
+            "id": 244,
+            "name": "VariableDeclaration",
+            "src": "336:35:3"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "ERROR",
+              "scope": 257,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 245,
+                "name": "ElementaryTypeName",
+                "src": "378:4:3"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 246,
+                "name": "Literal",
+                "src": "400:1:3"
+              }
+            ],
+            "id": 247,
+            "name": "VariableDeclaration",
+            "src": "378:23:3"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "CAR_ALREADY_REGISTERED",
+              "scope": 257,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 248,
+                "name": "ElementaryTypeName",
+                "src": "412:4:3"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "31303030",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 1000",
+                  "value": "1000"
+                },
+                "id": 249,
+                "name": "Literal",
+                "src": "451:4:3"
+              }
+            ],
+            "id": 250,
+            "name": "VariableDeclaration",
+            "src": "412:43:3"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "CAR_NOT_REGISTERED",
+              "scope": 257,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 251,
+                "name": "ElementaryTypeName",
+                "src": "462:4:3"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "31303031",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 1001",
+                  "value": "1001"
+                },
+                "id": 252,
+                "name": "Literal",
+                "src": "497:4:3"
+              }
+            ],
+            "id": 253,
+            "name": "VariableDeclaration",
+            "src": "462:39:3"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "name": "CAR_NOT_AVAILABLE",
+              "scope": 257,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 254,
+                "name": "ElementaryTypeName",
+                "src": "508:4:3"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "31303032",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 1002",
+                  "value": "1002"
+                },
+                "id": 255,
+                "name": "Literal",
+                "src": "542:4:3"
+              }
+            ],
+            "id": 256,
+            "name": "VariableDeclaration",
+            "src": "508:38:3"
+          }
+        ],
+        "id": 257,
+        "name": "ContractDefinition",
+        "src": "28:524:3"
+      }
+    ],
+    "id": 258,
+    "name": "SourceUnit",
+    "src": "0:552:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-05-17T20:00:26.929Z"
+}

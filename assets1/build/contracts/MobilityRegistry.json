@@ -1,0 +1,2290 @@
+{
+  "contractName": "MobilityRegistry",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getCarInfo",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bytes16"
+        },
+        {
+          "name": "",
+          "type": "bytes16"
+        },
+        {
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "brand",
+          "type": "bytes16"
+        },
+        {
+          "name": "model",
+          "type": "bytes16"
+        },
+        {
+          "name": "color",
+          "type": "uint8"
+        }
+      ],
+      "name": "addCar",
+      "outputs": [
+        {
+          "name": "error",
+          "type": "uint256"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "deleteCar",
+      "outputs": [
+        {
+          "name": "error",
+          "type": "uint256"
+        }
+      ],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "account",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "name": "name",
+          "type": "bytes32"
+        }
+      ],
+      "name": "UserRegistered",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "userAccount",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "carAccount",
+          "type": "uint256"
+        }
+      ],
+      "name": "CarListed",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b60006001819055506104df806100266000396000f300606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063183771821461005c578063218ff195146100e5578063bcce66c91461014c575b600080fd5b341561006757600080fd5b61006f61016a565b60405180846fffffffffffffffffffffffffffffffff19166fffffffffffffffffffffffffffffffff19168152602001836fffffffffffffffffffffffffffffffff19166fffffffffffffffffffffffffffffffff191681526020018260ff1660ff168152602001935050505060405180910390f35b61013660048080356fffffffffffffffffffffffffffffffff19169060200190919080356fffffffffffffffffffffffffffffffff191690602001909190803560ff16906020019091905050610242565b6040518082815260200191505060405180910390f35b61015461037f565b6040518082815260200191505060405180910390f35b60008060008060003391506000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002090508060010160019054906101000a900460ff161561022d578060000160009054906101000a9004700100000000000000000000000000000000028160000160109054906101000a9004700100000000000000000000000000000000028260010160009054906101000a900460ff1694509450945061023b565b600080906000909450945094505b5050909192565b60008060003391506000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002090508060010160019054906101000a900460ff16156102ab576103e89250610376565b60018160010160016101000a81548160ff021916908315150217905550858160000160006101000a8154816fffffffffffffffffffffffffffffffff021916908370010000000000000000000000000000000090040217905550848160000160106101000a8154816fffffffffffffffffffffffffffffffff021916908370010000000000000000000000000000000090040217905550838160010160006101000a81548160ff021916908360ff160217905550600160008154809291906001019190505550600192505b50509392505050565b60008060003391506000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002090508060010160019054906101000a900460ff16156104a9576000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600080820160006101000a8154906fffffffffffffffffffffffffffffffff02191690556000820160106101000a8154906fffffffffffffffffffffffffffffffff02191690556001820160006101000a81549060ff02191690556001820160016101000a81549060ff0219169055505060016000815480929190600190039190505550600192506104ae565b600092505b5050905600a165627a7a7230582097e5edaf8b634e3db6e0199631495e29cdc2875fe2c9235402cd1a0573f2563e0029",
+  "deployedBytecode": "0x606060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063183771821461005c578063218ff195146100e5578063bcce66c91461014c575b600080fd5b341561006757600080fd5b61006f61016a565b60405180846fffffffffffffffffffffffffffffffff19166fffffffffffffffffffffffffffffffff19168152602001836fffffffffffffffffffffffffffffffff19166fffffffffffffffffffffffffffffffff191681526020018260ff1660ff168152602001935050505060405180910390f35b61013660048080356fffffffffffffffffffffffffffffffff19169060200190919080356fffffffffffffffffffffffffffffffff191690602001909190803560ff16906020019091905050610242565b6040518082815260200191505060405180910390f35b61015461037f565b6040518082815260200191505060405180910390f35b60008060008060003391506000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002090508060010160019054906101000a900460ff161561022d578060000160009054906101000a9004700100000000000000000000000000000000028160000160109054906101000a9004700100000000000000000000000000000000028260010160009054906101000a900460ff1694509450945061023b565b600080906000909450945094505b5050909192565b60008060003391506000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002090508060010160019054906101000a900460ff16156102ab576103e89250610376565b60018160010160016101000a81548160ff021916908315150217905550858160000160006101000a8154816fffffffffffffffffffffffffffffffff021916908370010000000000000000000000000000000090040217905550848160000160106101000a8154816fffffffffffffffffffffffffffffffff021916908370010000000000000000000000000000000090040217905550838160010160006101000a81548160ff021916908360ff160217905550600160008154809291906001019190505550600192505b50509392505050565b60008060003391506000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200190815260200160002090508060010160019054906101000a900460ff16156104a9576000808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001908152602001600020600080820160006101000a8154906fffffffffffffffffffffffffffffffff02191690556000820160106101000a8154906fffffffffffffffffffffffffffffffff02191690556001820160006101000a81549060ff02191690556001820160016101000a81549060ff0219169055505060016000815480929190600190039190505550600192506104ae565b600092505b5050905600a165627a7a7230582097e5edaf8b634e3db6e0199631495e29cdc2875fe2c9235402cd1a0573f2563e0029",
+  "sourceMap": "84:2292:6:-;;;266:63;;;;;;;;318:1;306:9;:13;;;;84:2292;;;;;;",
+  "deployedSourceMap": "84:2292:6:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;476:316;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1047:492;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1570:285;;;;;;;;;;;;;;;;;;;;;;;476:316;523:7;531;541:5;559:11;607:7;573:10;559:24;;617:4;:9;622:3;617:9;;;;;;;;;;;;;;;607:19;;641:3;:10;;;;;;;;;;;;637:138;;;676:3;:9;;;;;;;;;;;;687:3;:9;;;;;;;;;;;;697:3;:9;;;;;;;;;;;;668:39;;;;;;;;637:138;760:1;739:24;;;;;;;;;;476:316;;;;;;:::o;1047:492::-;1123:10;1148:11;1196:7;1162:10;1148:24;;1206:4;:9;1211:3;1206:9;;;;;;;;;;;;;;;1196:19;;1230:3;:10;;;;;;;;;;;;1226:72;;;451:4:3;1257:29:6;;;;1226:72;1323:4;1310:3;:10;;;:17;;;;;;;;;;;;;;;;;;1350:5;1338:3;:9;;;:17;;;;;;;;;;;;;;;;;;;1378:5;1366:3;:9;;;:17;;;;;;;;;;;;;;;;;;;1406:5;1394:3;:9;;;:17;;;;;;;;;;;;;;;;;;1495:9;;:11;;;;;;;;;;;;;282:1:3;1517:14:6;;1047:492;;;;;;;;:::o;1570:285::-;1608:10;1633:11;1681:7;1647:10;1633:24;;1691:4;:9;1696:3;1691:9;;;;;;;;;;;;;;;1681:19;;1715:3;:10;;;;;;;;;;;;1711:114;;;1749:4;:9;1754:3;1749:9;;;;;;;;;;;;;;;;1742:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1773:9;;:11;;;;;;;;;;;;;;282:1:3;1799:14:6;;;;1711:114;400:1:3;1835:12:6;;1570:285;;;;:::o",
+  "source": "pragma solidity ^0.4.18;\r\n\r\nimport \"./CarTypes.sol\";\r\nimport \"./ErrorTypes.sol\";\r\n\r\ncontract MobilityRegistry is CarTypes, ErrorTypes {\r\n\r\n    mapping (address => Car)  cars;\r\n\r\n    uint countCars;\r\n\r\n    address  internal owner ;\r\n\r\n    //Authentication auth;\r\n    function MobilityRegistry () {\r\n        countCars = 0;\r\n      }\r\n\r\n    event UserRegistered(address indexed account, bytes32 indexed name);\r\n    event CarListed(address userAccount, uint carAccount);\r\n    \r\n   function getCarInfo( ) public constant returns(bytes16,bytes16 , uint8) {\r\n        address cid = msg.sender; //countCars;\r\n        Car car = cars[cid];\r\n        if (car.exists) {\r\n            return (car.brand, car.model,car.color);\r\n        } else{\r\n            return ('', '',uint8(0));\r\n        }\r\n        \r\n    }\r\n\r\n\r\n\r\n/*\r\n   function getName(uint cid) public constant returns(bytes32,address) {\r\n        Authentication.UserAccount user = auth.users[msg.sender];\r\n        return (auth.users[msg.sender].name,msg.sender);\r\n    }\r\n*/\r\n\r\n\r\n    /// Register a car.\r\n    function addCar(bytes16 brand , bytes16 model, uint8 color) payable returns(uint error) {\r\n\r\n        address cid = msg.sender; //countCars;\r\n        Car car = cars[cid];\r\n        if (car.exists) {\r\n            return CAR_ALREADY_REGISTERED;\r\n        }\r\n\r\n        car.exists = true;\r\n        car.brand = brand;\r\n        car.model = model;\r\n        car.color = color;\r\n      //  user.cars.push(cid);\r\n      //  CarListed(msg.sender, cid);\r\n\r\n        countCars++;\r\n        return SUCCESS;\r\n    }\r\n\r\n    /// delete a car.\r\n    function deleteCar () payable returns(uint error) {\r\n\r\n        address cid = msg.sender; //countCars;\r\n        Car car = cars[cid];\r\n        if (car.exists) {\r\n            delete cars[cid];\r\n            countCars--;\r\n            return SUCCESS;\r\n        }\r\n        return ERROR;\r\n    }\r\n\r\n/*\r\n    /// Register as user. \r\n    function registerUser(bytes32 name, bytes16 license) payable returns (uint error) {\r\n        Authentication.UserAccount user = auth.users[msg.sender];\r\n        if (user.exists) {\r\n            return ACCOUNT_ALREADY_EXIST;\r\n        }\r\n\r\n        user.addr = msg.sender;\r\n        user.name = name;\r\n        user.license = license;\r\n        user.exists = true;\r\n        auth.users[msg.sender] = user;\r\n\r\n        UserRegistered(user.addr, name);\r\n        return SUCCESS;\r\n    }\r\n\r\n*/\r\n}",
+  "sourcePath": "C:\\codes\\ethereum\\sergiy\\DjangoReactWebpack\\assets\\contracts\\cars\\MobilityRegistry.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/codes/ethereum/sergiy/DjangoReactWebpack/assets/contracts/cars/MobilityRegistry.sol",
+      "exportedSymbols": {
+        "MobilityRegistry": [
+          562
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 395,
+        "name": "PragmaDirective",
+        "src": "0:24:6"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 234,
+          "absolutePath": "/C/codes/ethereum/sergiy/DjangoReactWebpack/assets/contracts/cars/CarTypes.sol",
+          "file": "./CarTypes.sol",
+          "scope": 563,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 396,
+        "name": "ImportDirective",
+        "src": "28:24:6"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 258,
+          "absolutePath": "/C/codes/ethereum/sergiy/DjangoReactWebpack/assets/contracts/cars/ErrorTypes.sol",
+          "file": "./ErrorTypes.sol",
+          "scope": 563,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 397,
+        "name": "ImportDirective",
+        "src": "54:26:6"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            233,
+            257
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            562,
+            257,
+            233
+          ],
+          "name": "MobilityRegistry",
+          "scope": 563
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "CarTypes",
+                  "referencedDeclaration": 233,
+                  "type": "contract CarTypes"
+                },
+                "id": 398,
+                "name": "UserDefinedTypeName",
+                "src": "113:8:6"
+              }
+            ],
+            "id": 399,
+            "name": "InheritanceSpecifier",
+            "src": "113:8:6"
+          },
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ErrorTypes",
+                  "referencedDeclaration": 257,
+                  "type": "contract ErrorTypes"
+                },
+                "id": 400,
+                "name": "UserDefinedTypeName",
+                "src": "123:10:6"
+              }
+            ],
+            "id": 401,
+            "name": "InheritanceSpecifier",
+            "src": "123:10:6"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "cars",
+              "scope": 562,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct CarTypes.Car storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct CarTypes.Car storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 402,
+                    "name": "ElementaryTypeName",
+                    "src": "152:7:6"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Car",
+                      "referencedDeclaration": 216,
+                      "type": "struct CarTypes.Car storage pointer"
+                    },
+                    "id": 403,
+                    "name": "UserDefinedTypeName",
+                    "src": "163:3:6"
+                  }
+                ],
+                "id": 404,
+                "name": "Mapping",
+                "src": "143:24:6"
+              }
+            ],
+            "id": 405,
+            "name": "VariableDeclaration",
+            "src": "143:30:6"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "countCars",
+              "scope": 562,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 406,
+                "name": "ElementaryTypeName",
+                "src": "182:4:6"
+              }
+            ],
+            "id": 407,
+            "name": "VariableDeclaration",
+            "src": "182:14:6"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "owner",
+              "scope": 562,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "type": "address"
+                },
+                "id": 408,
+                "name": "ElementaryTypeName",
+                "src": "205:7:6"
+              }
+            ],
+            "id": 409,
+            "name": "VariableDeclaration",
+            "src": "205:23:6"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "MobilityRegistry",
+              "payable": false,
+              "scope": 562,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 410,
+                "name": "ParameterList",
+                "src": "292:2:6"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 411,
+                "name": "ParameterList",
+                "src": "295:0:6"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 407,
+                              "type": "uint256",
+                              "value": "countCars"
+                            },
+                            "id": 412,
+                            "name": "Identifier",
+                            "src": "306:9:6"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "30",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0"
+                            },
+                            "id": 413,
+                            "name": "Literal",
+                            "src": "318:1:6"
+                          }
+                        ],
+                        "id": 414,
+                        "name": "Assignment",
+                        "src": "306:13:6"
+                      }
+                    ],
+                    "id": 415,
+                    "name": "ExpressionStatement",
+                    "src": "306:13:6"
+                  }
+                ],
+                "id": 416,
+                "name": "Block",
+                "src": "295:34:6"
+              }
+            ],
+            "id": 417,
+            "name": "FunctionDefinition",
+            "src": "266:63:6"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "UserRegistered"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "account",
+                      "scope": 423,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 418,
+                        "name": "ElementaryTypeName",
+                        "src": "358:7:6"
+                      }
+                    ],
+                    "id": 419,
+                    "name": "VariableDeclaration",
+                    "src": "358:23:6"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "name",
+                      "scope": 423,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 420,
+                        "name": "ElementaryTypeName",
+                        "src": "383:7:6"
+                      }
+                    ],
+                    "id": 421,
+                    "name": "VariableDeclaration",
+                    "src": "383:20:6"
+                  }
+                ],
+                "id": 422,
+                "name": "ParameterList",
+                "src": "357:47:6"
+              }
+            ],
+            "id": 423,
+            "name": "EventDefinition",
+            "src": "337:68:6"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "name": "CarListed"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "userAccount",
+                      "scope": 429,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 424,
+                        "name": "ElementaryTypeName",
+                        "src": "427:7:6"
+                      }
+                    ],
+                    "id": 425,
+                    "name": "VariableDeclaration",
+                    "src": "427:19:6"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "carAccount",
+                      "scope": 429,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 426,
+                        "name": "ElementaryTypeName",
+                        "src": "448:4:6"
+                      }
+                    ],
+                    "id": 427,
+                    "name": "VariableDeclaration",
+                    "src": "448:15:6"
+                  }
+                ],
+                "id": 428,
+                "name": "ParameterList",
+                "src": "426:38:6"
+              }
+            ],
+            "id": 429,
+            "name": "EventDefinition",
+            "src": "411:54:6"
+          },
+          {
+            "attributes": {
+              "constant": true,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "getCarInfo",
+              "payable": false,
+              "scope": 562,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 430,
+                "name": "ParameterList",
+                "src": "495:3:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 470,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes16",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes16",
+                          "type": "bytes16"
+                        },
+                        "id": 431,
+                        "name": "ElementaryTypeName",
+                        "src": "523:7:6"
+                      }
+                    ],
+                    "id": 432,
+                    "name": "VariableDeclaration",
+                    "src": "523:7:6"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 470,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes16",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes16",
+                          "type": "bytes16"
+                        },
+                        "id": 433,
+                        "name": "ElementaryTypeName",
+                        "src": "531:7:6"
+                      }
+                    ],
+                    "id": 434,
+                    "name": "VariableDeclaration",
+                    "src": "531:7:6"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 470,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint8",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint8",
+                          "type": "uint8"
+                        },
+                        "id": 435,
+                        "name": "ElementaryTypeName",
+                        "src": "541:5:6"
+                      }
+                    ],
+                    "id": 436,
+                    "name": "VariableDeclaration",
+                    "src": "541:5:6"
+                  }
+                ],
+                "id": 437,
+                "name": "ParameterList",
+                "src": "522:25:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        439
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "cid",
+                          "scope": 470,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "address",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "type": "address"
+                            },
+                            "id": 438,
+                            "name": "ElementaryTypeName",
+                            "src": "559:7:6"
+                          }
+                        ],
+                        "id": 439,
+                        "name": "VariableDeclaration",
+                        "src": "559:11:6"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "sender",
+                          "referencedDeclaration": null,
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2452,
+                              "type": "msg",
+                              "value": "msg"
+                            },
+                            "id": 440,
+                            "name": "Identifier",
+                            "src": "573:3:6"
+                          }
+                        ],
+                        "id": 441,
+                        "name": "MemberAccess",
+                        "src": "573:10:6"
+                      }
+                    ],
+                    "id": 442,
+                    "name": "VariableDeclarationStatement",
+                    "src": "559:24:6"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        444
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "car",
+                          "scope": 470,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "struct CarTypes.Car storage pointer",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Car",
+                              "referencedDeclaration": 216,
+                              "type": "struct CarTypes.Car storage pointer"
+                            },
+                            "id": 443,
+                            "name": "UserDefinedTypeName",
+                            "src": "607:3:6"
+                          }
+                        ],
+                        "id": 444,
+                        "name": "VariableDeclaration",
+                        "src": "607:7:6"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct CarTypes.Car storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 405,
+                              "type": "mapping(address => struct CarTypes.Car storage ref)",
+                              "value": "cars"
+                            },
+                            "id": 445,
+                            "name": "Identifier",
+                            "src": "617:4:6"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 439,
+                              "type": "address",
+                              "value": "cid"
+                            },
+                            "id": 446,
+                            "name": "Identifier",
+                            "src": "622:3:6"
+                          }
+                        ],
+                        "id": 447,
+                        "name": "IndexAccess",
+                        "src": "617:9:6"
+                      }
+                    ],
+                    "id": 448,
+                    "name": "VariableDeclarationStatement",
+                    "src": "607:19:6"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "exists",
+                          "referencedDeclaration": 215,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 444,
+                              "type": "struct CarTypes.Car storage pointer",
+                              "value": "car"
+                            },
+                            "id": 449,
+                            "name": "Identifier",
+                            "src": "641:3:6"
+                          }
+                        ],
+                        "id": 450,
+                        "name": "MemberAccess",
+                        "src": "641:10:6"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "functionReturnParameters": 437
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "tuple(bytes16,bytes16,uint8)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "brand",
+                                      "referencedDeclaration": 209,
+                                      "type": "bytes16"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 444,
+                                          "type": "struct CarTypes.Car storage pointer",
+                                          "value": "car"
+                                        },
+                                        "id": 451,
+                                        "name": "Identifier",
+                                        "src": "676:3:6"
+                                      }
+                                    ],
+                                    "id": 452,
+                                    "name": "MemberAccess",
+                                    "src": "676:9:6"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "model",
+                                      "referencedDeclaration": 211,
+                                      "type": "bytes16"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 444,
+                                          "type": "struct CarTypes.Car storage pointer",
+                                          "value": "car"
+                                        },
+                                        "id": 453,
+                                        "name": "Identifier",
+                                        "src": "687:3:6"
+                                      }
+                                    ],
+                                    "id": 454,
+                                    "name": "MemberAccess",
+                                    "src": "687:9:6"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "color",
+                                      "referencedDeclaration": 213,
+                                      "type": "uint8"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 444,
+                                          "type": "struct CarTypes.Car storage pointer",
+                                          "value": "car"
+                                        },
+                                        "id": 455,
+                                        "name": "Identifier",
+                                        "src": "697:3:6"
+                                      }
+                                    ],
+                                    "id": 456,
+                                    "name": "MemberAccess",
+                                    "src": "697:9:6"
+                                  }
+                                ],
+                                "id": 457,
+                                "name": "TupleExpression",
+                                "src": "675:32:6"
+                              }
+                            ],
+                            "id": 458,
+                            "name": "Return",
+                            "src": "668:39:6"
+                          }
+                        ],
+                        "id": 459,
+                        "name": "Block",
+                        "src": "653:66:6"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "functionReturnParameters": 437
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "tuple(literal_string \"\",literal_string \"\",uint8)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "string",
+                                      "type": "literal_string \"\"",
+                                      "value": ""
+                                    },
+                                    "id": 460,
+                                    "name": "Literal",
+                                    "src": "747:2:6"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "string",
+                                      "type": "literal_string \"\"",
+                                      "value": ""
+                                    },
+                                    "id": 461,
+                                    "name": "Literal",
+                                    "src": "751:2:6"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "isStructConstructorCall": false,
+                                      "lValueRequested": false,
+                                      "names": [
+                                        null
+                                      ],
+                                      "type": "uint8",
+                                      "type_conversion": true
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": [
+                                            {
+                                              "typeIdentifier": "t_rational_0_by_1",
+                                              "typeString": "int_const 0"
+                                            }
+                                          ],
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "type": "type(uint8)",
+                                          "value": "uint8"
+                                        },
+                                        "id": 462,
+                                        "name": "ElementaryTypeNameExpression",
+                                        "src": "754:5:6"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "hexvalue": "30",
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": true,
+                                          "lValueRequested": false,
+                                          "subdenomination": null,
+                                          "token": "number",
+                                          "type": "int_const 0",
+                                          "value": "0"
+                                        },
+                                        "id": 463,
+                                        "name": "Literal",
+                                        "src": "760:1:6"
+                                      }
+                                    ],
+                                    "id": 464,
+                                    "name": "FunctionCall",
+                                    "src": "754:8:6"
+                                  }
+                                ],
+                                "id": 465,
+                                "name": "TupleExpression",
+                                "src": "746:17:6"
+                              }
+                            ],
+                            "id": 466,
+                            "name": "Return",
+                            "src": "739:24:6"
+                          }
+                        ],
+                        "id": 467,
+                        "name": "Block",
+                        "src": "724:51:6"
+                      }
+                    ],
+                    "id": 468,
+                    "name": "IfStatement",
+                    "src": "637:138:6"
+                  }
+                ],
+                "id": 469,
+                "name": "Block",
+                "src": "548:244:6"
+              }
+            ],
+            "id": 470,
+            "name": "FunctionDefinition",
+            "src": "476:316:6"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "addCar",
+              "payable": true,
+              "scope": 562,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "brand",
+                      "scope": 528,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes16",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes16",
+                          "type": "bytes16"
+                        },
+                        "id": 471,
+                        "name": "ElementaryTypeName",
+                        "src": "1063:7:6"
+                      }
+                    ],
+                    "id": 472,
+                    "name": "VariableDeclaration",
+                    "src": "1063:13:6"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "model",
+                      "scope": 528,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes16",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes16",
+                          "type": "bytes16"
+                        },
+                        "id": 473,
+                        "name": "ElementaryTypeName",
+                        "src": "1079:7:6"
+                      }
+                    ],
+                    "id": 474,
+                    "name": "VariableDeclaration",
+                    "src": "1079:13:6"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "color",
+                      "scope": 528,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint8",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint8",
+                          "type": "uint8"
+                        },
+                        "id": 475,
+                        "name": "ElementaryTypeName",
+                        "src": "1094:5:6"
+                      }
+                    ],
+                    "id": 476,
+                    "name": "VariableDeclaration",
+                    "src": "1094:11:6"
+                  }
+                ],
+                "id": 477,
+                "name": "ParameterList",
+                "src": "1062:44:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "error",
+                      "scope": 528,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 478,
+                        "name": "ElementaryTypeName",
+                        "src": "1123:4:6"
+                      }
+                    ],
+                    "id": 479,
+                    "name": "VariableDeclaration",
+                    "src": "1123:10:6"
+                  }
+                ],
+                "id": 480,
+                "name": "ParameterList",
+                "src": "1122:12:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        482
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "cid",
+                          "scope": 528,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "address",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "type": "address"
+                            },
+                            "id": 481,
+                            "name": "ElementaryTypeName",
+                            "src": "1148:7:6"
+                          }
+                        ],
+                        "id": 482,
+                        "name": "VariableDeclaration",
+                        "src": "1148:11:6"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "sender",
+                          "referencedDeclaration": null,
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2452,
+                              "type": "msg",
+                              "value": "msg"
+                            },
+                            "id": 483,
+                            "name": "Identifier",
+                            "src": "1162:3:6"
+                          }
+                        ],
+                        "id": 484,
+                        "name": "MemberAccess",
+                        "src": "1162:10:6"
+                      }
+                    ],
+                    "id": 485,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1148:24:6"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        487
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "car",
+                          "scope": 528,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "struct CarTypes.Car storage pointer",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Car",
+                              "referencedDeclaration": 216,
+                              "type": "struct CarTypes.Car storage pointer"
+                            },
+                            "id": 486,
+                            "name": "UserDefinedTypeName",
+                            "src": "1196:3:6"
+                          }
+                        ],
+                        "id": 487,
+                        "name": "VariableDeclaration",
+                        "src": "1196:7:6"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct CarTypes.Car storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 405,
+                              "type": "mapping(address => struct CarTypes.Car storage ref)",
+                              "value": "cars"
+                            },
+                            "id": 488,
+                            "name": "Identifier",
+                            "src": "1206:4:6"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 482,
+                              "type": "address",
+                              "value": "cid"
+                            },
+                            "id": 489,
+                            "name": "Identifier",
+                            "src": "1211:3:6"
+                          }
+                        ],
+                        "id": 490,
+                        "name": "IndexAccess",
+                        "src": "1206:9:6"
+                      }
+                    ],
+                    "id": 491,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1196:19:6"
+                  },
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "exists",
+                          "referencedDeclaration": 215,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 487,
+                              "type": "struct CarTypes.Car storage pointer",
+                              "value": "car"
+                            },
+                            "id": 492,
+                            "name": "Identifier",
+                            "src": "1230:3:6"
+                          }
+                        ],
+                        "id": 493,
+                        "name": "MemberAccess",
+                        "src": "1230:10:6"
+                      },
+                      {
+                        "children": [
+                          {
+                            "attributes": {
+                              "functionReturnParameters": 480
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 250,
+                                  "type": "uint256",
+                                  "value": "CAR_ALREADY_REGISTERED"
+                                },
+                                "id": 494,
+                                "name": "Identifier",
+                                "src": "1264:22:6"
+                              }
+                            ],
+                            "id": 495,
+                            "name": "Return",
+                            "src": "1257:29:6"
+                          }
+                        ],
+                        "id": 496,
+                        "name": "Block",
+                        "src": "1242:56:6"
+                      }
+                    ],
+                    "id": 497,
+                    "name": "IfStatement",
+                    "src": "1226:72:6"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "exists",
+                              "referencedDeclaration": 215,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 487,
+                                  "type": "struct CarTypes.Car storage pointer",
+                                  "value": "car"
+                                },
+                                "id": 498,
+                                "name": "Identifier",
+                                "src": "1310:3:6"
+                              }
+                            ],
+                            "id": 500,
+                            "name": "MemberAccess",
+                            "src": "1310:10:6"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 501,
+                            "name": "Literal",
+                            "src": "1323:4:6"
+                          }
+                        ],
+                        "id": 502,
+                        "name": "Assignment",
+                        "src": "1310:17:6"
+                      }
+                    ],
+                    "id": 503,
+                    "name": "ExpressionStatement",
+                    "src": "1310:17:6"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes16"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "brand",
+                              "referencedDeclaration": 209,
+                              "type": "bytes16"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 487,
+                                  "type": "struct CarTypes.Car storage pointer",
+                                  "value": "car"
+                                },
+                                "id": 504,
+                                "name": "Identifier",
+                                "src": "1338:3:6"
+                              }
+                            ],
+                            "id": 506,
+                            "name": "MemberAccess",
+                            "src": "1338:9:6"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 472,
+                              "type": "bytes16",
+                              "value": "brand"
+                            },
+                            "id": 507,
+                            "name": "Identifier",
+                            "src": "1350:5:6"
+                          }
+                        ],
+                        "id": 508,
+                        "name": "Assignment",
+                        "src": "1338:17:6"
+                      }
+                    ],
+                    "id": 509,
+                    "name": "ExpressionStatement",
+                    "src": "1338:17:6"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes16"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "model",
+                              "referencedDeclaration": 211,
+                              "type": "bytes16"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 487,
+                                  "type": "struct CarTypes.Car storage pointer",
+                                  "value": "car"
+                                },
+                                "id": 510,
+                                "name": "Identifier",
+                                "src": "1366:3:6"
+                              }
+                            ],
+                            "id": 512,
+                            "name": "MemberAccess",
+                            "src": "1366:9:6"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 474,
+                              "type": "bytes16",
+                              "value": "model"
+                            },
+                            "id": 513,
+                            "name": "Identifier",
+                            "src": "1378:5:6"
+                          }
+                        ],
+                        "id": 514,
+                        "name": "Assignment",
+                        "src": "1366:17:6"
+                      }
+                    ],
+                    "id": 515,
+                    "name": "ExpressionStatement",
+                    "src": "1366:17:6"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint8"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "color",
+                              "referencedDeclaration": 213,
+                              "type": "uint8"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 487,
+                                  "type": "struct CarTypes.Car storage pointer",
+                                  "value": "car"
+                                },
+                                "id": 516,
+                                "name": "Identifier",
+                                "src": "1394:3:6"
+                              }
+                            ],
+                            "id": 518,
+                            "name": "MemberAccess",
+                            "src": "1394:9:6"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 476,
+                              "type": "uint8",
+                              "value": "color"
+                            },
+                            "id": 519,
+                            "name": "Identifier",
+                            "src": "1406:5:6"
+                          }
+                        ],
+                        "id": 520,
+                        "name": "Assignment",
+                        "src": "1394:17:6"
+                      }
+                    ],
+                    "id": 521,
+                    "name": "ExpressionStatement",
+                    "src": "1394:17:6"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 407,
+                              "type": "uint256",
+                              "value": "countCars"
+                            },
+                            "id": 522,
+                            "name": "Identifier",
+                            "src": "1495:9:6"
+                          }
+                        ],
+                        "id": 523,
+                        "name": "UnaryOperation",
+                        "src": "1495:11:6"
+                      }
+                    ],
+                    "id": 524,
+                    "name": "ExpressionStatement",
+                    "src": "1495:11:6"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 480
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 238,
+                          "type": "uint256",
+                          "value": "SUCCESS"
+                        },
+                        "id": 525,
+                        "name": "Identifier",
+                        "src": "1524:7:6"
+                      }
+                    ],
+                    "id": 526,
+                    "name": "Return",
+                    "src": "1517:14:6"
+                  }
+                ],
+                "id": 527,
+                "name": "Block",
+                "src": "1135:404:6"
+              }
+            ],
+            "id": 528,
+            "name": "FunctionDefinition",
+            "src": "1047:492:6"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "deleteCar",
+              "payable": true,
+              "scope": 562,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 529,
+                "name": "ParameterList",
+                "src": "1589:2:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "error",
+                      "scope": 561,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 530,
+                        "name": "ElementaryTypeName",
+                        "src": "1608:4:6"
+                      }
+                    ],
+                    "id": 531,
+                    "name": "VariableDeclaration",
+                    "src": "1608:10:6"
+                  }
+                ],
+                "id": 532,
+                "name": "ParameterList",
+                "src": "1607:12:6"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        534
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "cid",
+                          "scope": 561,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "address",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "address",
+                              "type": "address"
+                            },
+                            "id": 533,
+                            "name": "ElementaryTypeName",
+                            "src": "1633:7:6"
+                          }
+                        ],
+                        "id": 534,
+                        "name": "VariableDeclaration",
+                        "src": "1633:11:6"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "sender",
+                          "referencedDeclaration": null,
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2452,
+                              "type": "msg",
+                              "value": "msg"
+                            },
+                            "id": 535,
+                            "name": "Identifier",
+                            "src": "1647:3:6"
+                          }
+                        ],
+                        "id": 536,
+                        "name": "MemberAccess",
+                        "src": "1647:10:6"
+                      }
+                    ],
+                    "id": 537,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1633:24:6"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        539
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "car",
+                          "scope": 561,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "struct CarTypes.Car storage pointer",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Car",
+                              "referencedDeclaration": 216,
+                              "type": "struct CarTypes.Car storage pointer"
+                            },
+                            "id": 538,
+                            "name": "UserDefinedTypeName",
+                            "src": "1681:3:6"
+                          }
+                        ],
+                        "id": 539,
+                        "name": "VariableDeclaration",
+                        "src": "1681:7:6"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct CarTypes.Car storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 405,
+                              "type": "mapping(address => struct CarTypes.Car storage ref)",
+                              "value": "cars"
+                            },
+                            "id": 540,
+                            "name": "Identifier",
+                            "src": "1691:4:6"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 534,
+                              "type": "address",
+                              "value": "cid"
+                            },
+                            "id": 541,
+                            "name": "Identifier",
+                            "src": "1696:3:6"
+                          }
+                        ],
+                        "id": 542,
+                        "name": "IndexAccess",
+                        "src": "1691:9:6"
+                      }
+                    ],
+                    "id": 543,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1681:19:6"
+                  },
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "exists",
+                          "referencedDeclaration": 215,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 539,
+                              "type": "struct CarTypes.Car storage pointer",
+                              "value": "car"
+                            },
+                            "id": 544,
+                            "name": "Identifier",
+                            "src": "1715:3:6"
+                          }
+                        ],
+                        "id": 545,
+                        "name": "MemberAccess",
+                        "src": "1715:10:6"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "delete",
+                                  "prefix": true,
+                                  "type": "tuple()"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "struct CarTypes.Car storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 405,
+                                          "type": "mapping(address => struct CarTypes.Car storage ref)",
+                                          "value": "cars"
+                                        },
+                                        "id": 546,
+                                        "name": "Identifier",
+                                        "src": "1749:4:6"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 534,
+                                          "type": "address",
+                                          "value": "cid"
+                                        },
+                                        "id": 547,
+                                        "name": "Identifier",
+                                        "src": "1754:3:6"
+                                      }
+                                    ],
+                                    "id": 548,
+                                    "name": "IndexAccess",
+                                    "src": "1749:9:6"
+                                  }
+                                ],
+                                "id": 549,
+                                "name": "UnaryOperation",
+                                "src": "1742:16:6"
+                              }
+                            ],
+                            "id": 550,
+                            "name": "ExpressionStatement",
+                            "src": "1742:16:6"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "--",
+                                  "prefix": false,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 407,
+                                      "type": "uint256",
+                                      "value": "countCars"
+                                    },
+                                    "id": 551,
+                                    "name": "Identifier",
+                                    "src": "1773:9:6"
+                                  }
+                                ],
+                                "id": 552,
+                                "name": "UnaryOperation",
+                                "src": "1773:11:6"
+                              }
+                            ],
+                            "id": 553,
+                            "name": "ExpressionStatement",
+                            "src": "1773:11:6"
+                          },
+                          {
+                            "attributes": {
+                              "functionReturnParameters": 532
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 238,
+                                  "type": "uint256",
+                                  "value": "SUCCESS"
+                                },
+                                "id": 554,
+                                "name": "Identifier",
+                                "src": "1806:7:6"
+                              }
+                            ],
+                            "id": 555,
+                            "name": "Return",
+                            "src": "1799:14:6"
+                          }
+                        ],
+                        "id": 556,
+                        "name": "Block",
+                        "src": "1727:98:6"
+                      }
+                    ],
+                    "id": 557,
+                    "name": "IfStatement",
+                    "src": "1711:114:6"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 532
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 247,
+                          "type": "uint256",
+                          "value": "ERROR"
+                        },
+                        "id": 558,
+                        "name": "Identifier",
+                        "src": "1842:5:6"
+                      }
+                    ],
+                    "id": 559,
+                    "name": "Return",
+                    "src": "1835:12:6"
+                  }
+                ],
+                "id": 560,
+                "name": "Block",
+                "src": "1620:235:6"
+              }
+            ],
+            "id": 561,
+            "name": "FunctionDefinition",
+            "src": "1570:285:6"
+          }
+        ],
+        "id": 562,
+        "name": "ContractDefinition",
+        "src": "84:2292:6"
+      }
+    ],
+    "id": 563,
+    "name": "SourceUnit",
+    "src": "0:2376:6"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-05-17T20:00:26.929Z"
+}

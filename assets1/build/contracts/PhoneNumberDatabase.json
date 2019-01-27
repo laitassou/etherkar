@@ -1,0 +1,2639 @@
+{
+  "contractName": "PhoneNumberDatabase",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "phoneNumber",
+          "type": "bytes32"
+        },
+        {
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "name": "checkPhoneNumber",
+      "outputs": [
+        {
+          "name": "isAssociated",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "phoneNumber",
+          "type": "bytes32"
+        },
+        {
+          "name": "operator",
+          "type": "address"
+        }
+      ],
+      "name": "registerPhoneNumber",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "bytecode": "0x6060604052341561000f57600080fd5b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506106288061005e6000396000f300606060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631c34a6771461006757806345d197ea146100c55780638da5cb5b1461010b578063f2fde38b14610160575b600080fd5b341561007257600080fd5b6100ab60048080356000191690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610199565b604051808215151515815260200191505060405180910390f35b34156100d057600080fd5b61010960048080356000191690602001909190803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061023b565b005b341561011657600080fd5b61011e610448565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561016b57600080fd5b610197600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061046d565b005b60008060006101a8858561053d565b91506001600083600019166000191681526020019081526020016000209050846000191681600101546000191614801561023157508373ffffffffffffffffffffffffffffffffffffffff168160020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16145b9250505092915050565b60008060008061024b868661053d565b9350600160008560001916600019168152602001908152602001600020925060008360020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614156104405785836001018160001916905550848360020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506002600087600019166000191681526020019081526020016000209150858260000181600019169055506001826001018181805490500191508161034191906105ab565b508382600101600184600101805490500381548110151561035e57fe5b90600052602060002090018160001916905550600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050848160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506001816001018181805490500191508161040f91906105ab565b508381600101600183600101805490500381548110151561042c57fe5b906000526020600020900181600019169055505b505050505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561053a57600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151561053957806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b50565b600082826040518083600019166000191681526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166c01000000000000000000000000028152601401925050506040518091039020905080905092915050565b8154818355818115116105d2578183600052602060002091820191016105d191906105d7565b5b505050565b6105f991905b808211156105f55760008160009055506001016105dd565b5090565b905600a165627a7a72305820a8e24dbcc53eea297e4efa8083c35ccc0bee8c45e7fe1b9ff706c2b268ecb58b0029",
+  "deployedBytecode": "0x606060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631c34a6771461006757806345d197ea146100c55780638da5cb5b1461010b578063f2fde38b14610160575b600080fd5b341561007257600080fd5b6100ab60048080356000191690602001909190803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610199565b604051808215151515815260200191505060405180910390f35b34156100d057600080fd5b61010960048080356000191690602001909190803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061023b565b005b341561011657600080fd5b61011e610448565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561016b57600080fd5b610197600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061046d565b005b60008060006101a8858561053d565b91506001600083600019166000191681526020019081526020016000209050846000191681600101546000191614801561023157508373ffffffffffffffffffffffffffffffffffffffff168160020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16145b9250505092915050565b60008060008061024b868661053d565b9350600160008560001916600019168152602001908152602001600020925060008360020160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1614156104405785836001018160001916905550848360020160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506002600087600019166000191681526020019081526020016000209150858260000181600019169055506001826001018181805490500191508161034191906105ab565b508382600101600184600101805490500381548110151561035e57fe5b90600052602060002090018160001916905550600360008673ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000209050848160000160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506001816001018181805490500191508161040f91906105ab565b508381600101600183600101805490500381548110151561042c57fe5b906000526020600020900181600019169055505b505050505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561053a57600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff1614151561053957806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b50565b600082826040518083600019166000191681526020018273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166c01000000000000000000000000028152601401925050506040518091039020905080905092915050565b8154818355818115116105d2578183600052602060002091820191016105d191906105d7565b5b505050565b6105f991905b808211156105f55760008160009055506001016105dd565b5090565b905600a165627a7a72305820a8e24dbcc53eea297e4efa8083c35ccc0bee8c45e7fe1b9ff706c2b268ecb58b0029",
+  "sourceMap": "76:2360:10:-;;;666:43;;;;;;;;288:10:14;280:5;;:18;;;;;;;;;;;;;;;;;;76:2360:10;;;;;;",
+  "deployedSourceMap": "76:2360:10:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2098:335;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;927:1159;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;227:20:14;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;383:112;;;;;;;;;;;;;;;;;;;;;;;;;;;;2098:335:10;2179:17;2217;2296:10;2237:40;2255:11;2268:8;2237:17;:40::i;:::-;2217:60;;2309:7;:18;2317:9;2309:18;;;;;;;;;;;;;;;;;2296:31;;2376:11;2354:33;;;:6;:18;;;:33;;;;:64;;;;;2410:8;2391:27;;:6;:15;;;;;;;;;;;;:27;;;2354:64;2346:73;;2098:335;;;;;;:::o;927:1159::-;1143:17;1222:10;1507:15;1791:18;1163:40;1181:11;1194:8;1163:17;:40::i;:::-;1143:60;;1235:7;:18;1243:9;1235:18;;;;;;;;;;;;;;;;;1222:31;;1361:3;1342:6;:15;;;;;;;;;;;;:22;;;1338:737;;;1414:11;1393:6;:18;;:32;;;;;;;1470:8;1452:6;:15;;;:26;;;;;;;;;;;;;;;;;;1525:12;:25;1538:11;1525:25;;;;;;;;;;;;;;;;;1507:43;;1603:11;1577;:23;;:37;;;;;;;1671:1;1641:11;:19;;:31;;;;;;;;;;;;;;:::i;:::-;;1753:9;1699:11;:19;;1748:1;1719:11;:19;;:26;;;;:30;1699:51;;;;;;;;;;;;;;;;;;:63;;;;;;;1812:15;:25;1828:8;1812:25;;;;;;;;;;;;;;;1791:46;;1890:8;1864:14;:23;;;:34;;;;;;;;;;;;;;;;;;1958:1;1925:14;:22;;:34;;;;;;;;;;;;;;:::i;:::-;;2046:9;1986:14;:22;;2041:1;2009:14;:22;;:29;;;;:33;1986:57;;;;;;;;;;;;;;;;;;:69;;;;;;;1338:737;927:1159;;;;;;:::o;227:20:14:-;;;;;;;;;;;;;:::o;383:112::-;356:5;;;;;;;;;;;342:19;;:10;:19;;;338:33;;;469:1;449:22;;:8;:22;;;;445:44;;;481:8;473:5;;:16;;;;;;;;;;;;;;;;;;445:44;338:33;383:112;:::o;721:194:10:-;805:11;852;865:8;842:32;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;836:38;;900:3;893:10;;721:194;;;;:::o;76:2360::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.4.4;\r\n\r\nimport \"../zeppelin/ownership/Ownable.sol\";\r\n\r\n\r\ncontract PhoneNumberDatabase is Ownable {\r\n        struct Record {\r\n                bytes32 key;\r\n                bytes32 phoneNumber;\r\n                address operator;\r\n        }\r\n        mapping (bytes32 => Record) records;\r\n\r\n        struct PhoneRecord {\r\n                bytes32 phoneNumber;\r\n                bytes32[] records;\r\n        }\r\n        mapping (bytes32 => PhoneRecord) phoneRecords;\r\n\r\n        struct OperatorRecord {\r\n                address operator;\r\n                bytes32[] records;\r\n        }\r\n        mapping (address => OperatorRecord) operatorRecords;\r\n\r\n        function PhoneNumberDatabase() {\r\n        }\r\n\r\n        function generateRecordKey(bytes32 phoneNumber, address operator) internal returns (bytes32 key){\r\n                key = keccak256(phoneNumber, operator);\r\n                return key;\r\n        }\r\n\r\n        function registerPhoneNumber(bytes32 phoneNumber, address operator) public {\r\n                /*\r\n                 * Stores an association between a phone number and an address.\r\n                 */\r\n                bytes32 recordKey = generateRecordKey(phoneNumber, operator);\r\n                var record = records[recordKey];\r\n                // TODO: Only need to do this if they are unset.\r\n                if (record.operator == 0x0) {\r\n                        record.phoneNumber = phoneNumber;\r\n                        record.operator = operator;\r\n\r\n                        var phoneRecord = phoneRecords[phoneNumber];\r\n                        phoneRecord.phoneNumber = phoneNumber;\r\n                        phoneRecord.records.length += 1;\r\n                        phoneRecord.records[phoneRecord.records.length - 1] = recordKey;\r\n\r\n                        var operatorRecord = operatorRecords[operator];\r\n                        operatorRecord.operator = operator;\r\n                        operatorRecord.records.length += 1;\r\n                        operatorRecord.records[operatorRecord.records.length - 1] = recordKey;\r\n                }\r\n        }\r\n\r\n        function checkPhoneNumber(bytes32 phoneNumber, address operator) public returns (bool isAssociated) {\r\n                bytes32 recordKey = generateRecordKey(phoneNumber, operator);\r\n                var record = records[recordKey];\r\n                return (record.phoneNumber == phoneNumber && record.operator == operator);\r\n\r\n        }\r\n}",
+  "sourcePath": "C:\\codes\\ethereum\\sergiy\\DjangoReactWebpack\\assets\\contracts\\phone-number\\PhoneNumberDatabase.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/C/codes/ethereum/sergiy/DjangoReactWebpack/assets/contracts/phone-number/PhoneNumberDatabase.sol",
+      "exportedSymbols": {
+        "PhoneNumberDatabase": [
+          2193
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".4"
+          ]
+        },
+        "id": 2002,
+        "name": "PragmaDirective",
+        "src": "0:23:10"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 2441,
+          "absolutePath": "/C/codes/ethereum/sergiy/DjangoReactWebpack/assets/contracts/zeppelin/ownership/Ownable.sol",
+          "file": "../zeppelin/ownership/Ownable.sol",
+          "scope": 2194,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2003,
+        "name": "ImportDirective",
+        "src": "27:43:10"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            2440
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            2193,
+            2440
+          ],
+          "name": "PhoneNumberDatabase",
+          "scope": 2194
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 2440,
+                  "type": "contract Ownable"
+                },
+                "id": 2004,
+                "name": "UserDefinedTypeName",
+                "src": "108:7:10"
+              }
+            ],
+            "id": 2005,
+            "name": "InheritanceSpecifier",
+            "src": "108:7:10"
+          },
+          {
+            "attributes": {
+              "canonicalName": "PhoneNumberDatabase.Record",
+              "name": "Record",
+              "scope": 2193,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "key",
+                  "scope": 2012,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 2006,
+                    "name": "ElementaryTypeName",
+                    "src": "160:7:10"
+                  }
+                ],
+                "id": 2007,
+                "name": "VariableDeclaration",
+                "src": "160:11:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "phoneNumber",
+                  "scope": 2012,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 2008,
+                    "name": "ElementaryTypeName",
+                    "src": "190:7:10"
+                  }
+                ],
+                "id": 2009,
+                "name": "VariableDeclaration",
+                "src": "190:19:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "operator",
+                  "scope": 2012,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 2010,
+                    "name": "ElementaryTypeName",
+                    "src": "228:7:10"
+                  }
+                ],
+                "id": 2011,
+                "name": "VariableDeclaration",
+                "src": "228:16:10"
+              }
+            ],
+            "id": 2012,
+            "name": "StructDefinition",
+            "src": "127:129:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "records",
+              "scope": 2193,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(bytes32 => struct PhoneNumberDatabase.Record storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(bytes32 => struct PhoneNumberDatabase.Record storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 2013,
+                    "name": "ElementaryTypeName",
+                    "src": "275:7:10"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Record",
+                      "referencedDeclaration": 2012,
+                      "type": "struct PhoneNumberDatabase.Record storage pointer"
+                    },
+                    "id": 2014,
+                    "name": "UserDefinedTypeName",
+                    "src": "286:6:10"
+                  }
+                ],
+                "id": 2015,
+                "name": "Mapping",
+                "src": "266:27:10"
+              }
+            ],
+            "id": 2016,
+            "name": "VariableDeclaration",
+            "src": "266:35:10"
+          },
+          {
+            "attributes": {
+              "canonicalName": "PhoneNumberDatabase.PhoneRecord",
+              "name": "PhoneRecord",
+              "scope": 2193,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "phoneNumber",
+                  "scope": 2022,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 2017,
+                    "name": "ElementaryTypeName",
+                    "src": "352:7:10"
+                  }
+                ],
+                "id": 2018,
+                "name": "VariableDeclaration",
+                "src": "352:19:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "records",
+                  "scope": 2022,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32[] storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "bytes32[] storage pointer"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 2019,
+                        "name": "ElementaryTypeName",
+                        "src": "390:7:10"
+                      }
+                    ],
+                    "id": 2020,
+                    "name": "ArrayTypeName",
+                    "src": "390:9:10"
+                  }
+                ],
+                "id": 2021,
+                "name": "VariableDeclaration",
+                "src": "390:17:10"
+              }
+            ],
+            "id": 2022,
+            "name": "StructDefinition",
+            "src": "314:105:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "phoneRecords",
+              "scope": 2193,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(bytes32 => struct PhoneNumberDatabase.PhoneRecord storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(bytes32 => struct PhoneNumberDatabase.PhoneRecord storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 2023,
+                    "name": "ElementaryTypeName",
+                    "src": "438:7:10"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "PhoneRecord",
+                      "referencedDeclaration": 2022,
+                      "type": "struct PhoneNumberDatabase.PhoneRecord storage pointer"
+                    },
+                    "id": 2024,
+                    "name": "UserDefinedTypeName",
+                    "src": "449:11:10"
+                  }
+                ],
+                "id": 2025,
+                "name": "Mapping",
+                "src": "429:32:10"
+              }
+            ],
+            "id": 2026,
+            "name": "VariableDeclaration",
+            "src": "429:45:10"
+          },
+          {
+            "attributes": {
+              "canonicalName": "PhoneNumberDatabase.OperatorRecord",
+              "name": "OperatorRecord",
+              "scope": 2193,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "operator",
+                  "scope": 2032,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 2027,
+                    "name": "ElementaryTypeName",
+                    "src": "528:7:10"
+                  }
+                ],
+                "id": 2028,
+                "name": "VariableDeclaration",
+                "src": "528:16:10"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "records",
+                  "scope": 2032,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32[] storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "length": null,
+                      "type": "bytes32[] storage pointer"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 2029,
+                        "name": "ElementaryTypeName",
+                        "src": "563:7:10"
+                      }
+                    ],
+                    "id": 2030,
+                    "name": "ArrayTypeName",
+                    "src": "563:9:10"
+                  }
+                ],
+                "id": 2031,
+                "name": "VariableDeclaration",
+                "src": "563:17:10"
+              }
+            ],
+            "id": 2032,
+            "name": "StructDefinition",
+            "src": "487:105:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "operatorRecords",
+              "scope": 2193,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => struct PhoneNumberDatabase.OperatorRecord storage ref)",
+              "value": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => struct PhoneNumberDatabase.OperatorRecord storage ref)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 2033,
+                    "name": "ElementaryTypeName",
+                    "src": "611:7:10"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "OperatorRecord",
+                      "referencedDeclaration": 2032,
+                      "type": "struct PhoneNumberDatabase.OperatorRecord storage pointer"
+                    },
+                    "id": 2034,
+                    "name": "UserDefinedTypeName",
+                    "src": "622:14:10"
+                  }
+                ],
+                "id": 2035,
+                "name": "Mapping",
+                "src": "602:35:10"
+              }
+            ],
+            "id": 2036,
+            "name": "VariableDeclaration",
+            "src": "602:51:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": true,
+              "modifiers": [
+                null
+              ],
+              "name": "PhoneNumberDatabase",
+              "payable": false,
+              "scope": 2193,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2037,
+                "name": "ParameterList",
+                "src": "694:2:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2038,
+                "name": "ParameterList",
+                "src": "697:0:10"
+              },
+              {
+                "attributes": {
+                  "statements": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2039,
+                "name": "Block",
+                "src": "697:12:10"
+              }
+            ],
+            "id": 2040,
+            "name": "FunctionDefinition",
+            "src": "666:43:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "generateRecordKey",
+              "payable": false,
+              "scope": 2193,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "internal"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "phoneNumber",
+                      "scope": 2059,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 2041,
+                        "name": "ElementaryTypeName",
+                        "src": "748:7:10"
+                      }
+                    ],
+                    "id": 2042,
+                    "name": "VariableDeclaration",
+                    "src": "748:19:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "operator",
+                      "scope": 2059,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 2043,
+                        "name": "ElementaryTypeName",
+                        "src": "769:7:10"
+                      }
+                    ],
+                    "id": 2044,
+                    "name": "VariableDeclaration",
+                    "src": "769:16:10"
+                  }
+                ],
+                "id": 2045,
+                "name": "ParameterList",
+                "src": "747:39:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "key",
+                      "scope": 2059,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 2046,
+                        "name": "ElementaryTypeName",
+                        "src": "805:7:10"
+                      }
+                    ],
+                    "id": 2047,
+                    "name": "VariableDeclaration",
+                    "src": "805:11:10"
+                  }
+                ],
+                "id": 2048,
+                "name": "ParameterList",
+                "src": "804:13:10"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2047,
+                              "type": "bytes32",
+                              "value": "key"
+                            },
+                            "id": 2049,
+                            "name": "Identifier",
+                            "src": "836:3:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "bytes32",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_bytes32",
+                                      "typeString": "bytes32"
+                                    },
+                                    {
+                                      "typeIdentifier": "t_address",
+                                      "typeString": "address"
+                                    }
+                                  ],
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2446,
+                                  "type": "function () pure returns (bytes32)",
+                                  "value": "keccak256"
+                                },
+                                "id": 2050,
+                                "name": "Identifier",
+                                "src": "842:9:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2042,
+                                  "type": "bytes32",
+                                  "value": "phoneNumber"
+                                },
+                                "id": 2051,
+                                "name": "Identifier",
+                                "src": "852:11:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2044,
+                                  "type": "address",
+                                  "value": "operator"
+                                },
+                                "id": 2052,
+                                "name": "Identifier",
+                                "src": "865:8:10"
+                              }
+                            ],
+                            "id": 2053,
+                            "name": "FunctionCall",
+                            "src": "842:32:10"
+                          }
+                        ],
+                        "id": 2054,
+                        "name": "Assignment",
+                        "src": "836:38:10"
+                      }
+                    ],
+                    "id": 2055,
+                    "name": "ExpressionStatement",
+                    "src": "836:38:10"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 2048
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "overloadedDeclarations": [
+                            null
+                          ],
+                          "referencedDeclaration": 2047,
+                          "type": "bytes32",
+                          "value": "key"
+                        },
+                        "id": 2056,
+                        "name": "Identifier",
+                        "src": "900:3:10"
+                      }
+                    ],
+                    "id": 2057,
+                    "name": "Return",
+                    "src": "893:10:10"
+                  }
+                ],
+                "id": 2058,
+                "name": "Block",
+                "src": "817:98:10"
+              }
+            ],
+            "id": 2059,
+            "name": "FunctionDefinition",
+            "src": "721:194:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "registerPhoneNumber",
+              "payable": false,
+              "scope": 2193,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "phoneNumber",
+                      "scope": 2159,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 2060,
+                        "name": "ElementaryTypeName",
+                        "src": "956:7:10"
+                      }
+                    ],
+                    "id": 2061,
+                    "name": "VariableDeclaration",
+                    "src": "956:19:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "operator",
+                      "scope": 2159,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 2062,
+                        "name": "ElementaryTypeName",
+                        "src": "977:7:10"
+                      }
+                    ],
+                    "id": 2063,
+                    "name": "VariableDeclaration",
+                    "src": "977:16:10"
+                  }
+                ],
+                "id": 2064,
+                "name": "ParameterList",
+                "src": "955:39:10"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 2065,
+                "name": "ParameterList",
+                "src": "1002:0:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        2067
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "recordKey",
+                          "scope": 2159,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "bytes32",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "bytes32",
+                              "type": "bytes32"
+                            },
+                            "id": 2066,
+                            "name": "ElementaryTypeName",
+                            "src": "1143:7:10"
+                          }
+                        ],
+                        "id": 2067,
+                        "name": "VariableDeclaration",
+                        "src": "1143:17:10"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bytes32",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                },
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2059,
+                              "type": "function (bytes32,address) returns (bytes32)",
+                              "value": "generateRecordKey"
+                            },
+                            "id": 2068,
+                            "name": "Identifier",
+                            "src": "1163:17:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2061,
+                              "type": "bytes32",
+                              "value": "phoneNumber"
+                            },
+                            "id": 2069,
+                            "name": "Identifier",
+                            "src": "1181:11:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2063,
+                              "type": "address",
+                              "value": "operator"
+                            },
+                            "id": 2070,
+                            "name": "Identifier",
+                            "src": "1194:8:10"
+                          }
+                        ],
+                        "id": 2071,
+                        "name": "FunctionCall",
+                        "src": "1163:40:10"
+                      }
+                    ],
+                    "id": 2072,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1143:60:10"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        2073
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "record",
+                          "scope": 2159,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "struct PhoneNumberDatabase.Record storage pointer",
+                          "typeName": null,
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [],
+                        "id": 2073,
+                        "name": "VariableDeclaration",
+                        "src": "1222:10:10"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct PhoneNumberDatabase.Record storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2016,
+                              "type": "mapping(bytes32 => struct PhoneNumberDatabase.Record storage ref)",
+                              "value": "records"
+                            },
+                            "id": 2074,
+                            "name": "Identifier",
+                            "src": "1235:7:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2067,
+                              "type": "bytes32",
+                              "value": "recordKey"
+                            },
+                            "id": 2075,
+                            "name": "Identifier",
+                            "src": "1243:9:10"
+                          }
+                        ],
+                        "id": 2076,
+                        "name": "IndexAccess",
+                        "src": "1235:18:10"
+                      }
+                    ],
+                    "id": 2077,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1222:31:10"
+                  },
+                  {
+                    "attributes": {
+                      "falseBody": null
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          },
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "==",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "operator",
+                              "referencedDeclaration": 2011,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2073,
+                                  "type": "struct PhoneNumberDatabase.Record storage pointer",
+                                  "value": "record"
+                                },
+                                "id": 2078,
+                                "name": "Identifier",
+                                "src": "1342:6:10"
+                              }
+                            ],
+                            "id": 2079,
+                            "name": "MemberAccess",
+                            "src": "1342:15:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "307830",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 0",
+                              "value": "0x0"
+                            },
+                            "id": 2080,
+                            "name": "Literal",
+                            "src": "1361:3:10"
+                          }
+                        ],
+                        "id": 2081,
+                        "name": "BinaryOperation",
+                        "src": "1342:22:10"
+                      },
+                      {
+                        "children": [
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "bytes32"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "phoneNumber",
+                                      "referencedDeclaration": 2009,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 2073,
+                                          "type": "struct PhoneNumberDatabase.Record storage pointer",
+                                          "value": "record"
+                                        },
+                                        "id": 2082,
+                                        "name": "Identifier",
+                                        "src": "1393:6:10"
+                                      }
+                                    ],
+                                    "id": 2084,
+                                    "name": "MemberAccess",
+                                    "src": "1393:18:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2061,
+                                      "type": "bytes32",
+                                      "value": "phoneNumber"
+                                    },
+                                    "id": 2085,
+                                    "name": "Identifier",
+                                    "src": "1414:11:10"
+                                  }
+                                ],
+                                "id": 2086,
+                                "name": "Assignment",
+                                "src": "1393:32:10"
+                              }
+                            ],
+                            "id": 2087,
+                            "name": "ExpressionStatement",
+                            "src": "1393:32:10"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "operator",
+                                      "referencedDeclaration": 2011,
+                                      "type": "address"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 2073,
+                                          "type": "struct PhoneNumberDatabase.Record storage pointer",
+                                          "value": "record"
+                                        },
+                                        "id": 2088,
+                                        "name": "Identifier",
+                                        "src": "1452:6:10"
+                                      }
+                                    ],
+                                    "id": 2090,
+                                    "name": "MemberAccess",
+                                    "src": "1452:15:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2063,
+                                      "type": "address",
+                                      "value": "operator"
+                                    },
+                                    "id": 2091,
+                                    "name": "Identifier",
+                                    "src": "1470:8:10"
+                                  }
+                                ],
+                                "id": 2092,
+                                "name": "Assignment",
+                                "src": "1452:26:10"
+                              }
+                            ],
+                            "id": 2093,
+                            "name": "ExpressionStatement",
+                            "src": "1452:26:10"
+                          },
+                          {
+                            "attributes": {
+                              "assignments": [
+                                2094
+                              ]
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "constant": false,
+                                  "name": "phoneRecord",
+                                  "scope": 2159,
+                                  "stateVariable": false,
+                                  "storageLocation": "default",
+                                  "type": "struct PhoneNumberDatabase.PhoneRecord storage pointer",
+                                  "typeName": null,
+                                  "value": null,
+                                  "visibility": "internal"
+                                },
+                                "children": [],
+                                "id": 2094,
+                                "name": "VariableDeclaration",
+                                "src": "1507:15:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct PhoneNumberDatabase.PhoneRecord storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2026,
+                                      "type": "mapping(bytes32 => struct PhoneNumberDatabase.PhoneRecord storage ref)",
+                                      "value": "phoneRecords"
+                                    },
+                                    "id": 2095,
+                                    "name": "Identifier",
+                                    "src": "1525:12:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2061,
+                                      "type": "bytes32",
+                                      "value": "phoneNumber"
+                                    },
+                                    "id": 2096,
+                                    "name": "Identifier",
+                                    "src": "1538:11:10"
+                                  }
+                                ],
+                                "id": 2097,
+                                "name": "IndexAccess",
+                                "src": "1525:25:10"
+                              }
+                            ],
+                            "id": 2098,
+                            "name": "VariableDeclarationStatement",
+                            "src": "1507:43:10"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "bytes32"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "phoneNumber",
+                                      "referencedDeclaration": 2018,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 2094,
+                                          "type": "struct PhoneNumberDatabase.PhoneRecord storage pointer",
+                                          "value": "phoneRecord"
+                                        },
+                                        "id": 2099,
+                                        "name": "Identifier",
+                                        "src": "1577:11:10"
+                                      }
+                                    ],
+                                    "id": 2101,
+                                    "name": "MemberAccess",
+                                    "src": "1577:23:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2061,
+                                      "type": "bytes32",
+                                      "value": "phoneNumber"
+                                    },
+                                    "id": 2102,
+                                    "name": "Identifier",
+                                    "src": "1603:11:10"
+                                  }
+                                ],
+                                "id": 2103,
+                                "name": "Assignment",
+                                "src": "1577:37:10"
+                              }
+                            ],
+                            "id": 2104,
+                            "name": "ExpressionStatement",
+                            "src": "1577:37:10"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "+=",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "length",
+                                      "referencedDeclaration": null,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "member_name": "records",
+                                          "referencedDeclaration": 2021,
+                                          "type": "bytes32[] storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 2094,
+                                              "type": "struct PhoneNumberDatabase.PhoneRecord storage pointer",
+                                              "value": "phoneRecord"
+                                            },
+                                            "id": 2105,
+                                            "name": "Identifier",
+                                            "src": "1641:11:10"
+                                          }
+                                        ],
+                                        "id": 2108,
+                                        "name": "MemberAccess",
+                                        "src": "1641:19:10"
+                                      }
+                                    ],
+                                    "id": 2109,
+                                    "name": "MemberAccess",
+                                    "src": "1641:26:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "31",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 1",
+                                      "value": "1"
+                                    },
+                                    "id": 2110,
+                                    "name": "Literal",
+                                    "src": "1671:1:10"
+                                  }
+                                ],
+                                "id": 2111,
+                                "name": "Assignment",
+                                "src": "1641:31:10"
+                              }
+                            ],
+                            "id": 2112,
+                            "name": "ExpressionStatement",
+                            "src": "1641:31:10"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "bytes32"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "member_name": "records",
+                                          "referencedDeclaration": 2021,
+                                          "type": "bytes32[] storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 2094,
+                                              "type": "struct PhoneNumberDatabase.PhoneRecord storage pointer",
+                                              "value": "phoneRecord"
+                                            },
+                                            "id": 2113,
+                                            "name": "Identifier",
+                                            "src": "1699:11:10"
+                                          }
+                                        ],
+                                        "id": 2120,
+                                        "name": "MemberAccess",
+                                        "src": "1699:19:10"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "commonType": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                          },
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "operator": "-",
+                                          "type": "uint256"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "isConstant": false,
+                                              "isLValue": true,
+                                              "isPure": false,
+                                              "lValueRequested": false,
+                                              "member_name": "length",
+                                              "referencedDeclaration": null,
+                                              "type": "uint256"
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "isConstant": false,
+                                                  "isLValue": true,
+                                                  "isPure": false,
+                                                  "lValueRequested": false,
+                                                  "member_name": "records",
+                                                  "referencedDeclaration": 2021,
+                                                  "type": "bytes32[] storage ref"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attributes": {
+                                                      "argumentTypes": null,
+                                                      "overloadedDeclarations": [
+                                                        null
+                                                      ],
+                                                      "referencedDeclaration": 2094,
+                                                      "type": "struct PhoneNumberDatabase.PhoneRecord storage pointer",
+                                                      "value": "phoneRecord"
+                                                    },
+                                                    "id": 2115,
+                                                    "name": "Identifier",
+                                                    "src": "1719:11:10"
+                                                  }
+                                                ],
+                                                "id": 2116,
+                                                "name": "MemberAccess",
+                                                "src": "1719:19:10"
+                                              }
+                                            ],
+                                            "id": 2117,
+                                            "name": "MemberAccess",
+                                            "src": "1719:26:10"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "hexvalue": "31",
+                                              "isConstant": false,
+                                              "isLValue": false,
+                                              "isPure": true,
+                                              "lValueRequested": false,
+                                              "subdenomination": null,
+                                              "token": "number",
+                                              "type": "int_const 1",
+                                              "value": "1"
+                                            },
+                                            "id": 2118,
+                                            "name": "Literal",
+                                            "src": "1748:1:10"
+                                          }
+                                        ],
+                                        "id": 2119,
+                                        "name": "BinaryOperation",
+                                        "src": "1719:30:10"
+                                      }
+                                    ],
+                                    "id": 2121,
+                                    "name": "IndexAccess",
+                                    "src": "1699:51:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2067,
+                                      "type": "bytes32",
+                                      "value": "recordKey"
+                                    },
+                                    "id": 2122,
+                                    "name": "Identifier",
+                                    "src": "1753:9:10"
+                                  }
+                                ],
+                                "id": 2123,
+                                "name": "Assignment",
+                                "src": "1699:63:10"
+                              }
+                            ],
+                            "id": 2124,
+                            "name": "ExpressionStatement",
+                            "src": "1699:63:10"
+                          },
+                          {
+                            "attributes": {
+                              "assignments": [
+                                2125
+                              ]
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "constant": false,
+                                  "name": "operatorRecord",
+                                  "scope": 2159,
+                                  "stateVariable": false,
+                                  "storageLocation": "default",
+                                  "type": "struct PhoneNumberDatabase.OperatorRecord storage pointer",
+                                  "typeName": null,
+                                  "value": null,
+                                  "visibility": "internal"
+                                },
+                                "children": [],
+                                "id": 2125,
+                                "name": "VariableDeclaration",
+                                "src": "1791:18:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct PhoneNumberDatabase.OperatorRecord storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2036,
+                                      "type": "mapping(address => struct PhoneNumberDatabase.OperatorRecord storage ref)",
+                                      "value": "operatorRecords"
+                                    },
+                                    "id": 2126,
+                                    "name": "Identifier",
+                                    "src": "1812:15:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2063,
+                                      "type": "address",
+                                      "value": "operator"
+                                    },
+                                    "id": 2127,
+                                    "name": "Identifier",
+                                    "src": "1828:8:10"
+                                  }
+                                ],
+                                "id": 2128,
+                                "name": "IndexAccess",
+                                "src": "1812:25:10"
+                              }
+                            ],
+                            "id": 2129,
+                            "name": "VariableDeclarationStatement",
+                            "src": "1791:46:10"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "operator",
+                                      "referencedDeclaration": 2028,
+                                      "type": "address"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 2125,
+                                          "type": "struct PhoneNumberDatabase.OperatorRecord storage pointer",
+                                          "value": "operatorRecord"
+                                        },
+                                        "id": 2130,
+                                        "name": "Identifier",
+                                        "src": "1864:14:10"
+                                      }
+                                    ],
+                                    "id": 2132,
+                                    "name": "MemberAccess",
+                                    "src": "1864:23:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2063,
+                                      "type": "address",
+                                      "value": "operator"
+                                    },
+                                    "id": 2133,
+                                    "name": "Identifier",
+                                    "src": "1890:8:10"
+                                  }
+                                ],
+                                "id": 2134,
+                                "name": "Assignment",
+                                "src": "1864:34:10"
+                              }
+                            ],
+                            "id": 2135,
+                            "name": "ExpressionStatement",
+                            "src": "1864:34:10"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "+=",
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "member_name": "length",
+                                      "referencedDeclaration": null,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "member_name": "records",
+                                          "referencedDeclaration": 2031,
+                                          "type": "bytes32[] storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 2125,
+                                              "type": "struct PhoneNumberDatabase.OperatorRecord storage pointer",
+                                              "value": "operatorRecord"
+                                            },
+                                            "id": 2136,
+                                            "name": "Identifier",
+                                            "src": "1925:14:10"
+                                          }
+                                        ],
+                                        "id": 2139,
+                                        "name": "MemberAccess",
+                                        "src": "1925:22:10"
+                                      }
+                                    ],
+                                    "id": 2140,
+                                    "name": "MemberAccess",
+                                    "src": "1925:29:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "hexvalue": "31",
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "subdenomination": null,
+                                      "token": "number",
+                                      "type": "int_const 1",
+                                      "value": "1"
+                                    },
+                                    "id": 2141,
+                                    "name": "Literal",
+                                    "src": "1958:1:10"
+                                  }
+                                ],
+                                "id": 2142,
+                                "name": "Assignment",
+                                "src": "1925:34:10"
+                              }
+                            ],
+                            "id": 2143,
+                            "name": "ExpressionStatement",
+                            "src": "1925:34:10"
+                          },
+                          {
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "=",
+                                  "type": "bytes32"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": true,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "isConstant": false,
+                                          "isLValue": true,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "member_name": "records",
+                                          "referencedDeclaration": 2031,
+                                          "type": "bytes32[] storage ref"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "overloadedDeclarations": [
+                                                null
+                                              ],
+                                              "referencedDeclaration": 2125,
+                                              "type": "struct PhoneNumberDatabase.OperatorRecord storage pointer",
+                                              "value": "operatorRecord"
+                                            },
+                                            "id": 2144,
+                                            "name": "Identifier",
+                                            "src": "1986:14:10"
+                                          }
+                                        ],
+                                        "id": 2151,
+                                        "name": "MemberAccess",
+                                        "src": "1986:22:10"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "commonType": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                          },
+                                          "isConstant": false,
+                                          "isLValue": false,
+                                          "isPure": false,
+                                          "lValueRequested": false,
+                                          "operator": "-",
+                                          "type": "uint256"
+                                        },
+                                        "children": [
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "isConstant": false,
+                                              "isLValue": true,
+                                              "isPure": false,
+                                              "lValueRequested": false,
+                                              "member_name": "length",
+                                              "referencedDeclaration": null,
+                                              "type": "uint256"
+                                            },
+                                            "children": [
+                                              {
+                                                "attributes": {
+                                                  "argumentTypes": null,
+                                                  "isConstant": false,
+                                                  "isLValue": true,
+                                                  "isPure": false,
+                                                  "lValueRequested": false,
+                                                  "member_name": "records",
+                                                  "referencedDeclaration": 2031,
+                                                  "type": "bytes32[] storage ref"
+                                                },
+                                                "children": [
+                                                  {
+                                                    "attributes": {
+                                                      "argumentTypes": null,
+                                                      "overloadedDeclarations": [
+                                                        null
+                                                      ],
+                                                      "referencedDeclaration": 2125,
+                                                      "type": "struct PhoneNumberDatabase.OperatorRecord storage pointer",
+                                                      "value": "operatorRecord"
+                                                    },
+                                                    "id": 2146,
+                                                    "name": "Identifier",
+                                                    "src": "2009:14:10"
+                                                  }
+                                                ],
+                                                "id": 2147,
+                                                "name": "MemberAccess",
+                                                "src": "2009:22:10"
+                                              }
+                                            ],
+                                            "id": 2148,
+                                            "name": "MemberAccess",
+                                            "src": "2009:29:10"
+                                          },
+                                          {
+                                            "attributes": {
+                                              "argumentTypes": null,
+                                              "hexvalue": "31",
+                                              "isConstant": false,
+                                              "isLValue": false,
+                                              "isPure": true,
+                                              "lValueRequested": false,
+                                              "subdenomination": null,
+                                              "token": "number",
+                                              "type": "int_const 1",
+                                              "value": "1"
+                                            },
+                                            "id": 2149,
+                                            "name": "Literal",
+                                            "src": "2041:1:10"
+                                          }
+                                        ],
+                                        "id": 2150,
+                                        "name": "BinaryOperation",
+                                        "src": "2009:33:10"
+                                      }
+                                    ],
+                                    "id": 2152,
+                                    "name": "IndexAccess",
+                                    "src": "1986:57:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2067,
+                                      "type": "bytes32",
+                                      "value": "recordKey"
+                                    },
+                                    "id": 2153,
+                                    "name": "Identifier",
+                                    "src": "2046:9:10"
+                                  }
+                                ],
+                                "id": 2154,
+                                "name": "Assignment",
+                                "src": "1986:69:10"
+                              }
+                            ],
+                            "id": 2155,
+                            "name": "ExpressionStatement",
+                            "src": "1986:69:10"
+                          }
+                        ],
+                        "id": 2156,
+                        "name": "Block",
+                        "src": "1366:709:10"
+                      }
+                    ],
+                    "id": 2157,
+                    "name": "IfStatement",
+                    "src": "1338:737:10"
+                  }
+                ],
+                "id": 2158,
+                "name": "Block",
+                "src": "1002:1084:10"
+              }
+            ],
+            "id": 2159,
+            "name": "FunctionDefinition",
+            "src": "927:1159:10"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "checkPhoneNumber",
+              "payable": false,
+              "scope": 2193,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "phoneNumber",
+                      "scope": 2192,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 2160,
+                        "name": "ElementaryTypeName",
+                        "src": "2124:7:10"
+                      }
+                    ],
+                    "id": 2161,
+                    "name": "VariableDeclaration",
+                    "src": "2124:19:10"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "operator",
+                      "scope": 2192,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 2162,
+                        "name": "ElementaryTypeName",
+                        "src": "2145:7:10"
+                      }
+                    ],
+                    "id": 2163,
+                    "name": "VariableDeclaration",
+                    "src": "2145:16:10"
+                  }
+                ],
+                "id": 2164,
+                "name": "ParameterList",
+                "src": "2123:39:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "isAssociated",
+                      "scope": 2192,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 2165,
+                        "name": "ElementaryTypeName",
+                        "src": "2179:4:10"
+                      }
+                    ],
+                    "id": 2166,
+                    "name": "VariableDeclaration",
+                    "src": "2179:17:10"
+                  }
+                ],
+                "id": 2167,
+                "name": "ParameterList",
+                "src": "2178:19:10"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        2169
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "recordKey",
+                          "scope": 2192,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "bytes32",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "bytes32",
+                              "type": "bytes32"
+                            },
+                            "id": 2168,
+                            "name": "ElementaryTypeName",
+                            "src": "2217:7:10"
+                          }
+                        ],
+                        "id": 2169,
+                        "name": "VariableDeclaration",
+                        "src": "2217:17:10"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bytes32",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                },
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2059,
+                              "type": "function (bytes32,address) returns (bytes32)",
+                              "value": "generateRecordKey"
+                            },
+                            "id": 2170,
+                            "name": "Identifier",
+                            "src": "2237:17:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2161,
+                              "type": "bytes32",
+                              "value": "phoneNumber"
+                            },
+                            "id": 2171,
+                            "name": "Identifier",
+                            "src": "2255:11:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2163,
+                              "type": "address",
+                              "value": "operator"
+                            },
+                            "id": 2172,
+                            "name": "Identifier",
+                            "src": "2268:8:10"
+                          }
+                        ],
+                        "id": 2173,
+                        "name": "FunctionCall",
+                        "src": "2237:40:10"
+                      }
+                    ],
+                    "id": 2174,
+                    "name": "VariableDeclarationStatement",
+                    "src": "2217:60:10"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        2175
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "record",
+                          "scope": 2192,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "struct PhoneNumberDatabase.Record storage pointer",
+                          "typeName": null,
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [],
+                        "id": 2175,
+                        "name": "VariableDeclaration",
+                        "src": "2296:10:10"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct PhoneNumberDatabase.Record storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2016,
+                              "type": "mapping(bytes32 => struct PhoneNumberDatabase.Record storage ref)",
+                              "value": "records"
+                            },
+                            "id": 2176,
+                            "name": "Identifier",
+                            "src": "2309:7:10"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 2169,
+                              "type": "bytes32",
+                              "value": "recordKey"
+                            },
+                            "id": 2177,
+                            "name": "Identifier",
+                            "src": "2317:9:10"
+                          }
+                        ],
+                        "id": 2178,
+                        "name": "IndexAccess",
+                        "src": "2309:18:10"
+                      }
+                    ],
+                    "id": 2179,
+                    "name": "VariableDeclarationStatement",
+                    "src": "2296:31:10"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 2167
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_bool",
+                                "typeString": "bool"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "&&",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_bytes32",
+                                    "typeString": "bytes32"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "==",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "phoneNumber",
+                                      "referencedDeclaration": 2009,
+                                      "type": "bytes32"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 2175,
+                                          "type": "struct PhoneNumberDatabase.Record storage pointer",
+                                          "value": "record"
+                                        },
+                                        "id": 2180,
+                                        "name": "Identifier",
+                                        "src": "2354:6:10"
+                                      }
+                                    ],
+                                    "id": 2181,
+                                    "name": "MemberAccess",
+                                    "src": "2354:18:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2161,
+                                      "type": "bytes32",
+                                      "value": "phoneNumber"
+                                    },
+                                    "id": 2182,
+                                    "name": "Identifier",
+                                    "src": "2376:11:10"
+                                  }
+                                ],
+                                "id": 2183,
+                                "name": "BinaryOperation",
+                                "src": "2354:33:10"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "commonType": {
+                                    "typeIdentifier": "t_address",
+                                    "typeString": "address"
+                                  },
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "operator": "==",
+                                  "type": "bool"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "operator",
+                                      "referencedDeclaration": 2011,
+                                      "type": "address"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 2175,
+                                          "type": "struct PhoneNumberDatabase.Record storage pointer",
+                                          "value": "record"
+                                        },
+                                        "id": 2184,
+                                        "name": "Identifier",
+                                        "src": "2391:6:10"
+                                      }
+                                    ],
+                                    "id": 2185,
+                                    "name": "MemberAccess",
+                                    "src": "2391:15:10"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 2163,
+                                      "type": "address",
+                                      "value": "operator"
+                                    },
+                                    "id": 2186,
+                                    "name": "Identifier",
+                                    "src": "2410:8:10"
+                                  }
+                                ],
+                                "id": 2187,
+                                "name": "BinaryOperation",
+                                "src": "2391:27:10"
+                              }
+                            ],
+                            "id": 2188,
+                            "name": "BinaryOperation",
+                            "src": "2354:64:10"
+                          }
+                        ],
+                        "id": 2189,
+                        "name": "TupleExpression",
+                        "src": "2353:66:10"
+                      }
+                    ],
+                    "id": 2190,
+                    "name": "Return",
+                    "src": "2346:73:10"
+                  }
+                ],
+                "id": 2191,
+                "name": "Block",
+                "src": "2198:235:10"
+              }
+            ],
+            "id": 2192,
+            "name": "FunctionDefinition",
+            "src": "2098:335:10"
+          }
+        ],
+        "id": 2193,
+        "name": "ContractDefinition",
+        "src": "76:2360:10"
+      }
+    ],
+    "id": 2194,
+    "name": "SourceUnit",
+    "src": "0:2436:10"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-05-17T20:00:26.929Z"
+}
