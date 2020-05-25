@@ -4,6 +4,11 @@ A barebones Python app using Webpack and React, which can easily be deployed to 
 
 This application supports the [Getting Started with Python on Heroku](https://devcenter.heroku.com/articles/getting-started-with-python) article - check it out.
 
+See example of deployment : 
+here is a website with ethereum contract deployed on ethereum mainnet :
+
+https://infinite-badlands-37240.herokuapp.com/app
+
 ## Running Locally
 
 Make sure you have Node and NPM [installed property](https://nodejs.org)
