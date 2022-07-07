@@ -32,7 +32,7 @@
     "file-loader": "0.9.0",
     "jquery": "^2.2.2",
     "material-ui": "^0.20.0",
-    "moment": "^2.20.1",
+    "moment": "^2.29.4",
     "rc-calendar": "^9.4.0",
     "rc-time-picker": "^3.2.1",
     "react": "^15.6.2",
