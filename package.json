@@ -41,7 +41,7 @@
     "react-datetime": "^2.11.1",
     "react-dom": "^15.4.2",
     "react-form": "^3.0.0-beta.1",
-    "react-native": "^0.53.0",
+    "react-native": "^0.70.2",
     "react-phone-input": "^1.2.1",
     "react-places-autocomplete": "^5.4.3",
     "react-redux": "^5.0.2",
